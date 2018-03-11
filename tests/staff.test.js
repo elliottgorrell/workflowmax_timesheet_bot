@@ -6,8 +6,7 @@ import {response, expected} from './fixtures/staff';
 let nazi;
 
 test.before(() => {
-  // nazi = new TimesheetNazi("fakeApiKey","FakeAccountKey");
-  nazi = new TimesheetNazi();
+  nazi = new TimesheetNazi("fakeApiKey","FakeAccountKey");
 });
 
 test('should succeed in receiving an xml response and parsing to json', async t => {
