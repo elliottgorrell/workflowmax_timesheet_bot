@@ -1,5 +1,5 @@
 module.exports = {
-  "response": `
+  listResponse: `
     <Response api-method="List">
     <Status>OK</Status>
     <Times>
@@ -44,7 +44,7 @@ module.exports = {
     </Times>
 </Response>
 `,
-  expected: {
+  listExpected: {
     Time: [
       {
         "ID": "156350170",
@@ -85,6 +85,56 @@ module.exports = {
         "Billable": "false"
       }
     ]
+  },
+
+  staffResponse: `
+  <Response api-method="Staff">
+  <Status>OK</Status>
+  <Times>
+      <Time>
+          <ID>162464659</ID>
+          <Job>
+              <ID>J000071</ID>
+              <Name>Doghouse</Name>
+          </Job>
+          <Task>
+              <ID>84728424</ID>
+              <Name>Task Universe</Name>
+          </Task>
+          <Staff>
+              <ID>5555</ID>
+              <Name>Elliott Gorrell</Name>
+          </Staff>
+          <Date>2018-03-05T00:00:00</Date>
+          <Minutes>480</Minutes>
+          <Note>* Did some stuff * Did some more stuff</Note>
+          <Billable>true</Billable>
+      </Time>
+  </Times>
+</Response>
+`,
+  staffExpected: {
+    Time:
+    {
+       ID: "162464659",
+       Job: {
+         ID: "J000071",
+         Name: "Doghouse"
+       },
+       Task: {
+         ID: "84728424",
+         Name: "Task Universe"
+       },
+       Staff: {
+         ID: "5555",
+         Name: "Elliott Gorrell"
+       },
+       Date: "2018-03-05T00:00:00",
+       Minutes: "480",
+       Note: "* Did some stuff * Did some more stuff",
+       Billable: "true"
+     }
+   
   }
 
 }
