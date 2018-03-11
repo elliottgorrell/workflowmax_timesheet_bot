@@ -16,7 +16,7 @@ test('should succeed in receiving an xml response and parsing to json', async t 
     .reply(200, response);
 
   try {
-    const res = await nazi.timesheets.list();
+    const res = await nazi.timesheets.list("20180201","20180207");
     t.deepEqual(res, expected, 'Server list does not equal object as expected');
   } catch (err) {
     t.fail(err);
