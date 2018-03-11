@@ -1,7 +1,7 @@
 import test from 'ava';
 import nock from 'nock';
 import TimesheetNazi from '../index'
-import {response, expected} from './fixtures/index';
+import {response, expected} from './fixtures/timesheets';
 
 let nazi;
 
